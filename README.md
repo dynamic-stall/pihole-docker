@@ -4,6 +4,9 @@
 <br><br>
 BLUF: This project will allow you to use [Docker Compose](https://docs.docker.com/compose/) to run [Pi-hole](https://pi-hole.net/) and [Cloudflare Tunnel Client](https://github.com/cloudflare/cloudflared) together to achieve [DNS-Over-HTTPS](https://docs.pi-hole.net/guides/dns/cloudflared/). Not to mention domain-level ad blocking!
 
+NOTE: If your use case is to block [YouTube](https://discourse.pi-hole.net/t/youtube-ads-getting-through-pihole-any-advances-in-100-blocking-without-also-blocking-youtube-videos/60951) or Hulu ads... find another use case 😜.
+
+
 # Requirements
 
 - Whichever flavor of Linux you feel like troubleshooting (I'm using CentOS Stream 9)
@@ -34,9 +37,9 @@ It should return something like this
 Docker version 20.10.21, build baeda1f
 ```
 
-6. You can change the configuration values of Pi-hole and Cloudflare Tunnel Client in the [compose.yml](./compose.yml) file.
+6. You can change the configuration values of Pi-hole and Cloudflare Tunnel Client in the [compose.yml](./compose.yml) file (I advise you leave the CONTAINER names as is; another script relies on them being named, "pihole" and cloudflared". HOSTNAME changes will affect nothing but the joy in your heart).
 
-   - Docker Pi-Hole's [Environment Variables](https://github.com/pi-hole/docker-pi-hole/#environment-variables)
+   - Docker Pi-hole's [Environment Variables](https://github.com/pi-hole/docker-pi-hole/#environment-variables)
    - Cloudflare Tunnel Client's [Environment Variables](https://github.com/cloudflare/cloudflared/blob/master/cmd/cloudflared/proxydns/cmd.go)
 
 7. To build the Docker containers, run [build-pihole.sh](./build-pihole.sh)
@@ -53,14 +56,20 @@ b. Start Docker Compose in detached mode.
 
 c. Build your containers to spec (successfully, one would hope).
 
+8. (MacOS ONLY) If you are running MacOS, you have one more step prior to accessing the Web Admin page: run [macos-config.sh](./macos-config.sh) to set your WiFi DNS to the Pi-hole (DISCLAIMER: I don't completely understand why this is needed because I love myself too much to be out here running MacOS on anything. It's 2024 people; self-care is in! Get y'all an Android and ditch the MacBook... \#teampixel).
+
+```bash
+sudo ./macos-config.sh
+```
+
 # Pi-hole Web Admin UI
 
 Once the Pi-hole Docker container has started, you can access Pi-hole's Web Admin UI at [http://localhost:8061/admin](http://localhost:8061/admin).
 
-![pi-hole-web-admin-homepage](./doc/images/pi-hole-web-admin-home.png)
+![pi-hole-web-admin-home](https://github.com/dynamic-stall/pihole-cloudflared-docker/assets/76631795/5b15b0ef-160a-4063-9a32-49d6a1bc01b1)
 
 Enter the Web Admin password you set earlier.
 
 You can check the [Upstream DNS Servers](http://localhost:8061/admin/settings.php?tab=dns) by navigating to _Settings_ on the lefthand side and selecting the DNS tab. You should see the IP address set for your Cloudflare Tunnel Client under **Custom 1 (IPv4)**.
 
-![d-room dns scrnshot](https://github.com/dynamic-stall/pihole-cloudflared-docker/assets/76631795/f6da72be-f1d9-491b-91c9-7954633d05c4)
+![d-room dns scrnshot-markup](https://github.com/dynamic-stall/pihole-cloudflared-docker/assets/76631795/e45c3a88-f66d-4a02-8e60-e1743f7ac9d7)
