@@ -23,7 +23,7 @@
 ###################
 
 
-# fresh start:
+# Fresh start:
 docker container rm -f pihole cloudflared > /dev/null 2>&1
 
 for i in docker docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt remove $i > /dev/null 2>&1; done
@@ -63,6 +63,6 @@ sudo docker --version
 # Configure Docker to run without sudo:
 sudo usermod -aG docker $USER
 
-#test run:
+# Test run:
 docker run --rm hello-world
 
