@@ -16,7 +16,7 @@
 ### If the test run still fails, maybe I f***ed up; try running some other Docker command on your own.
 ### Still failing? Look at your firewall or IP-tables configs. Therein (likely) lies your problem...
 
-##### Still STILL failing? Hm... try a custom Docker network and define it as an external network in the compose.yml file.
+##### Still STILL failing? Hm... try a custom Docker network and define it as an external network in the compose.yml file. Check the "custom-network.sh" file for more details...
 ##### (ref: https://docs.docker.com/engine/reference/commandline/network_create/)
 ##### (ref: https://docs.docker.com/compose/networking/)
 
