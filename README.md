@@ -15,8 +15,11 @@
 # Requirements
 
 * **Docker Compose or Docker Desktop** (Docker install scripts for [RHEL/CentOS Stream 8-9](./install-docker_rhel8-9.sh) and [Pi OS](./install-docker_pi-os.sh) included in this repo; I'll add Windows and MacOS... at some point)
+
 * **Your pick of operating system, generally...** (_Windows_ installs will require WSL v1.2 or later) (Google Bard: "Docker currently supports the latest version of _macOS_ and the previous two releases. For example, at the time of writing, Docker supports macOS Monterey (latest), macOS Big Sur, and macOS Catalina.") (Most flavors of _Linux_ are supported, but Google is always your friend; I'm using CentOS Stream 9)
+
 * Preferably at least 4GB of RAM (I mean, 2GB would probably be fine?)
+
 * (OPTIONAL) [Cloudflare Zero Trust](https://www.cloudflare.com/zero-trust/products/access/) account for enhanced DNS capabilities
 
 <br>
