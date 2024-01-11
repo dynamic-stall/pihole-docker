@@ -100,8 +100,8 @@ You can check the **Upstream DNS Servers** by navigating to _Settings_ from the 
 
 This last and most important step depends on your network setup and intended deployment strategy, really...
 
-Follow this [guide on DHCP configurations](https://docs.pi-hole.net/docker/dhcp/) for your containers. If deploying network-wide, this will be crucial.
+* Follow this [guide on DHCP configurations](https://docs.pi-hole.net/docker/dhcp/) for your containers. If deploying network-wide, this will be crucial.
 
-Follow this [detailed guide on configuring your DNS](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245).
+* Follow this [detailed guide on configuring your DNS](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245).
 
-Follow this [post-install guide](https://docs.pi-hole.net/main/post-install/) for additional guidance.
+* Follow this [post-install guide](https://docs.pi-hole.net/main/post-install/) for additional guidance.
