@@ -75,7 +75,7 @@ This bash script will:
 
    * Ask for your intended Web Admin password (the ```password.txt``` file is populated, used for the Docker build, then deleted for security).
 
-   * Start Docker Compose in detached mode.
+   * Start Docker Compose (in daemon mode).
 
    * Build your containers to spec (successfully, one would hope).
 
