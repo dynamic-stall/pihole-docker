@@ -1,6 +1,11 @@
 #!/bin/bash
 
-CHK=$(docker container ls | grep 'pihole\|cloudflared')
+## Pi-hole container name
+PH=pihole
+## Cloudflared container name
+CF=cloudflared
+
+CHK=$(docker container ls | grep $PH\|$CF)
 
 if [[ $CHK == "" ]]
 then
