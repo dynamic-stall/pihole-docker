@@ -98,8 +98,8 @@ You can check the **Upstream DNS Servers** by navigating to _Settings_ from the 
 
 # Network Configuration
 
-This last and most important step depends on your network setup and intended deployment strategy, really. I don't feel like explaining it...
+This last and most important step depends on your network setup and intended deployment strategy, really...
 
 Follow this [detailed guide on configuring your DNS](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245). Just be sure to use the IP address of the [localhost](http://localhost) used to access the Web Admin UI (exclude port numbers).
 
-Follow this [post-install guide](https://docs.pi-hole.net/main/post-install/)
+Follow this [post-install guide](https://docs.pi-hole.net/main/post-install/) for additional guidance.
