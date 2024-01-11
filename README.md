@@ -44,7 +44,7 @@ iv. (OPTIONAL) Click on your newly created location under the **Location name** 
 
 <br>
 
-1. Make sure Docker Desktop is running by entering the following command in the terminal.
+1. Make sure Docker is running by entering the following command in the terminal.
 
 ```bash
 docker --version
