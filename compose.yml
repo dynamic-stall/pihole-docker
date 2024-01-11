@@ -1,5 +1,13 @@
 version: "4"
 
+######### LEGEND #########
+
+## - Notes
+
+#  - Commented-out code
+
+##########################
+
 ## More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
 services:
   cloudflared:
@@ -30,7 +38,7 @@ services:
     ports:
       - "53:53/tcp"
       - "53:53/udp"
-      #- "67:67/udp" # Only required if you are using Pi-hole as your DHCP server
+      #- "67:67/udp"      ## Only required if you are using Pi-hole as your DHCP server
       ## Web Admin Port
       - "8061:80/tcp"
 
@@ -64,11 +72,11 @@ services:
 
     ## https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     #cap_add:
-      #- NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
+      #- NET_ADMIN        ## This is required for version 4.1 onwards
     restart: unless-stopped
     networks:
       pihole:
-        # Pi-hole container IP
+        ## Pi-hole container IP
         ipv4_address: "172.31.10.2"
 
 networks:
@@ -81,7 +89,7 @@ networks:
         - gateway: "172.31.10.1"
 
   ## Reference the 'custom-network.sh' file, if you intend on going that route.
-  ## Un-comment the last 2 lines and delete or comment out the "pihole" network declaration.
+  ## Un-un-comment the last 2 lines and delete or comment out the "pihole" network declaration.
   ## You'll need to change lines 20 and 70 from "pihole" to the custom name (i.e., "law-net").
   ## Of course, you'll also need to update your IPs to match the subnet range you created.
   ## You can delete everything below line 81, as well, if this ain't your jam!
