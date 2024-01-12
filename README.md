@@ -85,7 +85,7 @@ This bash script will:
 
 Once the Pi-hole Docker container has started, you can access Pi-hole's Web Admin UI at [http://localhost:8061/admin](http://localhost:8061/admin).
 
-![pi-hole-web-admin-home](https://github.com/dynamic-stall/pihole-cloudflared-docker/assets/76631795/5b15b0ef-160a-4063-9a32-49d6a1bc01b1)
+![pi-hole-web-admin-home](https://github.com/dynamic-stall/pihole-cloudflared-docker/assets/76631795/80595882-7bb2-4b0f-aaff-5fd4f7b4623d)
 
 <br>
 
