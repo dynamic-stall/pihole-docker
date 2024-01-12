@@ -105,7 +105,7 @@ This last and most important step depends on your network setup and deployment s
 
 * Follow this [guide on DHCP configurations](https://docs.pi-hole.net/docker/dhcp/) for your containers. If deploying network-wide, this will be crucial.
 
-   * \* I reccommend the [macvlan method](https://tonylawrence.com/posts/unix/synology/free-your-synology-ports/)...
+   * (_\* I reccommend the [macvlan method](https://tonylawrence.com/posts/unix/synology/free-your-synology-ports/)..._)
 
 * Follow this [detailed guide on configuring your DNS](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245).
 
