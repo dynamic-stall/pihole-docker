@@ -2,7 +2,7 @@
 
 rm ./web-password/* > /dev/null 2>&1
 
-read -p "Set your Web Admin console password now: " PSWD
+read -p "Set your Web Admin console password now: " -s PSWD
 touch ./web-password/password.txt
 echo $PSWD > ./web-password/password.txt
 
