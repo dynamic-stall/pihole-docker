@@ -8,7 +8,7 @@
 
 <br>
 
-**NOTE**: If your use case is to block [YouTube](https://discourse.pi-hole.net/t/youtube-ads-getting-through-pihole-any-advances-in-100-blocking-without-also-blocking-youtube-videos/60951) or Hulu ads... find another use case 😜.
+**NOTE**: If your use case is to block [YouTube](https://discourse.pi-hole.net/t/youtube-ads-getting-through-pihole-any-advances-in-100-blocking-without-also-blocking-youtube-videos/60951) or [Hulu](https://www.reddit.com/r/pihole/comments/lbzjyt/hulu_ads/?rdt=45152) ads... find another use case 😜.
 
 <br>
 
