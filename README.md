@@ -124,4 +124,9 @@ This last and most important step depends on your network setup and deployment s
 
 <br>
 
-* **NOTE** If you have your Pi-hole container up and running, but Cloudflared is still misbehaving, you can deploy the Pi-hole container on its own: simply change the DNS servers Pi-hole is using under _Settings_ (see: **Pi-hole Web Admin UI** section). Set the two custom IPv4 addresses to the Cloudflare DNS addresses you recorded earlier \<OR\> use one of the preset DNS locations (I'd still recommend choosing Cloudflare's _1.1.1.1_, if nothing else...).
+* **NOTE**: If you have your Pi-hole container up and running, but Cloudflared is still misbehaving, you can deploy the Pi-hole container on its own: simply change the DNS servers Pi-hole is using under _Settings_ (see: **Pi-hole Web Admin UI** section). Set the two custom IPv4 addresses to the Cloudflare DNS addresses you recorded earlier \<OR\> use one of the preset DNS locations (I'd still recommend choosing Cloudflare's _1.1.1.1_, if nothing else...).
+
+<br>
+
+* **Note**: I could have mentioned firewall configurations earlier than now... I've given you more than either of us needs, so I'm gonna leave this up to your _ingenuity_ (read: _ability to perform Google searches_).
+   * The basic command (for Linux users) is ```sudo firewall-cmd --add-port=<port_num>/<protocol> --permanent``` (where <port_num> is the port number, and <protocol> is the Transport-layer protocol: either ```tcp``` or ```udp```; both for port 53) followed by a ```sudo systemctl reload firewalld``` (... you're welcome).
