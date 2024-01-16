@@ -115,7 +115,7 @@ This last and most important step depends on your network setup and deployment s
 
 * Follow this [guide on DHCP configurations](https://docs.pi-hole.net/docker/dhcp/) for your containers. If deploying network-wide, this will be crucial.
 
-   * _\*\* I reccommend going with a [macvlan network](https://tonylawrence.com/posts/unix/synology/free-your-synology-ports/) setup... (dedicated IP for router DNS configs + no need for Pi-hole host port forwarding)_
+   * _\*\* I reccommend going with a [macvlan network](https://tonylawrence.com/posts/unix/synology/free-your-synology-ports/) setup (dedicated IP for router DNS configs + no need for Pi-hole host port forwarding)_.
       * _(I'll update the ```docker-compose.yml``` template to reflect this... at some point)_
 
 * Follow this [detailed guide on configuring your DNS](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245).
@@ -124,4 +124,4 @@ This last and most important step depends on your network setup and deployment s
 
 <br>
 
-* **NOTE** If you have your Pi-hole container up and running, but Cloudflared is still misbehaving, you can deploy the Pi-hole container on its own: simply change the DNS servers Pi-hole is using under _Settings_ (see: **Pi-hole Web Admin UI** section). Set the two custom IPv4 addresses to the Cloudflare DNS addresses you recorded earlier or use one of the preset DNS locations (I'd still recommend choosing Cloudflare's _1.1.1.1_, if nothing else...)
+* **NOTE** If you have your Pi-hole container up and running, but Cloudflared is still misbehaving, you can deploy the Pi-hole container on its own: simply change the DNS servers Pi-hole is using under _Settings_ (see: **Pi-hole Web Admin UI** section). Set the two custom IPv4 addresses to the Cloudflare DNS addresses you recorded earlier or use one of the preset DNS locations (I'd still recommend choosing Cloudflare's _1.1.1.1_, if nothing else...).
