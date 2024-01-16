@@ -122,4 +122,6 @@ This last and most important step depends on your network setup and deployment s
 
 * Follow this [post-install guide](https://docs.pi-hole.net/main/post-install/) for additional guidance.
 
+<br>
+
 * **NOTE** If you have your Pi-hole container up and running, but Cloudflared is still misbehaving, you can deploy the Pi-hole container on its own: simply change the DNS servers Pi-hole is using under _Settings_ (see: **Pi-hole Web Admin UI** section). Set the two custom IPv4 addresses to the Cloudflare DNS addresses you recorded earlier or use one of the preset DNS locations (I'd still recommend choosing Cloudflare's _1.1.1.1_, if nothing else...)
