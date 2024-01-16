@@ -81,6 +81,16 @@ This bash script will:
 
 <br>
 
+4. Run the following command to to check basic stats of your newly erected containers:
+
+```bash
+docker container ls
+```
+
+If you see either container stuck in a ```Restarting``` state, something went wrong during the compose ("This looks like a job for..." you).
+
+<br>
+
 # Pi-hole Web Admin UI
 
 Once the Pi-hole Docker container has started, you can access Pi-hole's Web Admin UI at [http://localhost:8061/admin](http://localhost:8061/admin).
@@ -111,3 +121,5 @@ This last and most important step depends on your network setup and deployment s
 * Follow this [detailed guide on configuring your DNS](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245).
 
 * Follow this [post-install guide](https://docs.pi-hole.net/main/post-install/) for additional guidance.
+
+* **NOTE** If you have your Pi-hole container up and running, but Cloudflared is still misbehaving, you can deploy the Pi-hole container on its own; simply change the DNS servers Pi-hole is using under _Settings_ (see: **Pi-hole Web Admin UI** section). You cna set the two custom IPv4 addresses to the Cloudflare DNS addresses you recorded earlier or use one of the preset DNS locations (I'd still recommend choosing Cloudflare's _1.1.1.1_, if nothing else...)
