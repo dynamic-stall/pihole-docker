@@ -129,4 +129,17 @@ This last and most important step depends on your network setup and deployment s
 <br>
 
 * **Note**: I could have mentioned firewall configurations earlier than now... I've given you more than either of us needs, so I'm gonna leave this up to your _ingenuity_ (read: _ability to perform Google searches_).
-   * The basic command (for Linux users) is ```sudo firewall-cmd --add-port=<port_num>/<protocol> --permanent``` (where <port_num> is the port number, and <protocol> is the Transport-layer protocol: either ```tcp``` or ```udp```; both for port 53) followed by a ```sudo systemctl reload firewalld``` (... you're welcome).
+   * The basic command (for Linux users) is:
+
+  ```bash
+   sudo firewall-cmd --add-port=<port_num>/<protocol> --permanent
+
+   ```
+   _(where ```<port_num>``` is the port number, and ```<protocol>``` is the Transport-layer protocol: either ```tcp``` or ```udp```; both for port 53)_
+
+   * ... followed by a:
+
+   ```bash
+   sudo systemctl reload firewalld
+   ```
+   (you're welcome).
