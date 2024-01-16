@@ -81,13 +81,13 @@ This bash script will:
 
 <br>
 
-4. Run the following command to to check basic stats of your newly erected containers:
+4. Run the following command to check basic stats for your newly erected containers:
 
 ```bash
 docker container ls
 ```
 
-If you see either container stuck in a ```Restarting``` state, something went wrong during the compose ("This looks like a job for..." you).
+If you see either container stuck in a ```Restarting``` state, something went wrong during the compose ("This looks like a job for..." _you_).
 
 <br>
 
