@@ -87,7 +87,7 @@ This bash script will:
 docker container ls
 ```
 
-If you see either container stuck in a ```Restarting``` state, something went wrong during the compose ("This looks like a job for..." _you_).
+If you see either container stuck in a ```Restarting``` state, something went wrong during the build ("This looks like a job for..." _you_; you can try re-running the build file as a first troubleshooting step, though...)
 
 <br>
 
