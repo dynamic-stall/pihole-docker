@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## BLUF: If you intend to deploy your Pi-hole container on a singular MacOS device without overarching network setup, you can use this script to set your iMac's DNS to the Pi-hole...
+## BLUF: If you intend to deploy your Pi-hole container on a singular macOS device without overarching network setup, you can use this script to set your MacBook's DNS to the Pi-hole...
 
 ## Pi-hole container name
 PH=pihole
