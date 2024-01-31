@@ -107,6 +107,16 @@ Enter the Web Admin password you set earlier.
 
 <br>
 
+_If the password needs to be reset, run the following command, replacing ```<password>``` with... you intended password:_
+
+```bash
+docker exec pihole pihole -a -p <password>
+```
+
+* _(Leaving ```<password>``` blank will remove the password requirement altogether.)_
+
+<br>
+
 You can check the **Upstream DNS Servers** by navigating to _Settings_ from the lefthand menu and selecting the DNS tab. You should see the IP address set for your Cloudflare Tunnel Client under **Custom 1 (IPv4)**.
 
 ![d-room dns scrnshot-markup](https://github.com/dynamic-stall/pihole-cloudflared-docker/assets/76631795/e45c3a88-f66d-4a02-8e60-e1743f7ac9d7)
