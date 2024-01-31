@@ -12,7 +12,7 @@
 
 <br>
 
-**DISCLAIMER**: This is an educational experience aimed at deepening one's understanding of DNS, containerization, and computer networking. Pi-hole is open-source software licensed under the European Union Public License (EUPL), which allows for its free use and modification. Please refer to [this link](https://pi-hole.net/trademark-rules-and-brand-guidelines/) for trademark rules and brand guidelines. As always, use your best judgement and/or [the Internet](https://www.reddit.com/r/pihole/comments/a6q2zv/are_there_any_legal_concerns_in_the_us_for_using/?rdt=44519) for guidelines on things you should and should not be doing with this software... Please. And. Thank. You!
+**DISCLAIMER**: This is an educational experience aimed at deepening one's understanding of networking and containerization. Pi-hole is open-source software licensed under the European Union Public License (EUPL), which allows for its free use and modification. Please refer to [this link](https://pi-hole.net/trademark-rules-and-brand-guidelines/) for trademark rules and brand guidelines. As always, use your best judgement and/or [the Internet](https://www.reddit.com/r/pihole/comments/a6q2zv/are_there_any_legal_concerns_in_the_us_for_using/?rdt=44519) for guidelines on things you should and should not be doing with this software... Please. And. Thank. You!
 
 <br>
 
