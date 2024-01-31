@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## INSTRUCTIONS: This script will create a custom Docker network for your container(s). You can use the preset values, or choose your favorite IP scheme.
+## BLUF: This script will create a custom Docker network for your container(s). You can use the preset values, or choose your favorite IP scheme.
 
 ## MACVLAN SETUP (OPTIONAL):      (example script at the end)
 ## If you would like to use an existing IP address on your home network for management purposes, you can go with a macvlan network setup:
