@@ -120,7 +120,7 @@ This last and most important step depends on your network setup and deployment s
 * Follow this [guide on DHCP configurations](https://docs.pi-hole.net/docker/dhcp/) for your containers. If deploying network-wide, this will be crucial.
 
    * _\*\* I reccommend going with a [macvlan network](https://tonylawrence.com/posts/unix/synology/free-your-synology-ports/) setup (dedicated IP for router DNS configs + no need for Pi-hole host port forwarding)_.
-      _* (See instructions in the [custom-network.sh](./custom-network.sh) file for additional detail on setting this up)_
+      * _(See instructions in the [custom-network.sh](./custom-network.sh) file for additional detail on setting this up)_
 
 * Follow this [detailed guide on configuring your DNS](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245).
 
