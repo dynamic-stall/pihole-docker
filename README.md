@@ -125,7 +125,7 @@ You can check the **Upstream DNS Servers** by navigating to _Settings_ from the 
 
 # Network Configuration
 
-This last and most important step depends on your network setup and deployment strategy, really...
+This last and most important step depends on your network setup and deployment strategy.
 
 * Follow this [guide on DHCP configurations](https://docs.pi-hole.net/docker/dhcp/) for your containers. If deploying network-wide, this will be crucial.
 
