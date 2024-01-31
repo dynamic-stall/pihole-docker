@@ -48,13 +48,13 @@ iv. (OPTIONAL) Click on your newly created location under the **Location name** 
 
 <br>
 
-1. Make sure Docker is running by entering the following command in the terminal.
+1. Make sure Docker is running by entering the following command in the terminal:
 
 ```bash
 docker --version
 ```
 
-It should return something like this
+It should return something like this:
 
 ```text
 Docker version 20.10.21, build baeda1f
@@ -69,7 +69,7 @@ Docker version 20.10.21, build baeda1f
 
 <br>
 
-3. To build the Docker containers, run [build-pihole.sh](./build-pihole.sh)
+3. To build the Docker containers, run [build-pihole.sh](./build-pihole.sh):
 
 ```bash
 sudo ./build-pihole.sh
