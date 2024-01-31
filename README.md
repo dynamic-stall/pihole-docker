@@ -146,4 +146,4 @@ This last and most important step depends on your network setup and deployment s
    ```bash
    sudo systemctl reload firewalld
    ```
-   (you're welcome).
+   (ya welcome).
