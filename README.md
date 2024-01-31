@@ -12,6 +12,10 @@
 
 <br>
 
+**DISCLAIMER**: This is an educational experience aimed at deepening one's understanding of DNS, containerization, and computer networking. Pi-hole is open-source software licensed under the European Union Public License (EUPL), which allows for its free use and modification. Please refer to [this link](https://pi-hole.net/trademark-rules-and-brand-guidelines/) for trademark rules and brand guidelines. As always, use your best judgement and/or [the Internet](https://www.reddit.com/r/pihole/comments/a6q2zv/are_there_any_legal_concerns_in_the_us_for_using/?rdt=44519) for guidelines on things you should and should not be doing with this software... Please. And. Thank. You!
+
+<br>
+
 # Requirements
 
 * **Docker Compose or Docker Desktop** (Docker install scripts for [RHEL/CentOS Stream 8-9](./install-docker_rhel8-9.sh) and [Pi OS](./install-docker_pi-os.sh) included in this repo; I'll add Windows and MacOS... at some point)
