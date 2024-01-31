@@ -88,11 +88,12 @@ networks:
         - subnet: "172.31.10.0/24"
         - gateway: "172.31.10.1"
 
-  ## Reference the 'custom-network.sh' file, if you intend on going the macvlan route (more instructions on that to come).
-  ## Un-un-comment the last 2 lines and delete or comment out the "pihole" network declarations (lines 83-89).
-  ## You'll need to change lines 28 and 78 from "pihole" to the custom name (i.e., "law-net").
-  ## Of course, you'll also need to update your IPs to match the subnet range you created.
-  ## You can delete everything below line 89, as well, if this ain't your jam!
+  ## Reference the 'custom-network.sh' file, if you intend on going the macvlan route (more instructions on that to come)...
+  ## Then, un-comment lines 98-99 and delete or comment out the "pihole" network declarations (lines 83-89)...
+  ## Then, you'll need to change lines 28 and 78 from "pihole" to the custom name (i.e., "law-net")...
+  ## Then, of course, you'll also need to update your IPs to match the subnet range you created.
+  
+  ## OR, you can delete everything below line 89, as well, if this ain't your jam!
   
   #law-net:
     #external: true
