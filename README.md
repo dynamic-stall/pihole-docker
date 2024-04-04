@@ -16,7 +16,7 @@
 
 <br>
 
-**DISCLAIMER II:** Some elements of the Compose file need refinement, I know. This has been a learning experience for myself, as well.
+**DISCLAIMER II:** Some elements of the Compose file need refinement, I know. This has been a learning experience for myself, as well (not to mention things I still need to migrate from my private version of this repo over to the public; patience, people, please!).
 
 <br>
 
