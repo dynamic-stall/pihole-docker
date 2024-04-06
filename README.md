@@ -101,7 +101,7 @@ If you see either container stuck in a ```Restarting``` state, something went wr
 docker compose up -d
 ```
 
-'<OR'>
+`<OR`>
 
 ```bash
 docker restart <container_name>
