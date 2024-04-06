@@ -81,7 +81,7 @@ sudo ./build-pihole.sh
 
 This bash script will:
 
-   * Ask for your intended Web Admin password (the ```password.txt``` file is populated, used for the Docker build, then deleted for security).
+   * Ask for your intended Web Admin password (in 'silent mode' for added security; i.e., you won't see characters as you type).
 
    * Start Docker Compose (in daemon mode).
 

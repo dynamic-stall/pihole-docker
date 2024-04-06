@@ -8,5 +8,3 @@ echo $PSWD > ./web-password/password.txt
 
 echo -e "Starting Pi-hole DNS over HTTPS..."
 docker compose up -d
-
-rm ./web-password/*
