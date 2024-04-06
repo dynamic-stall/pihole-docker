@@ -16,7 +16,7 @@
 
 <br>
 
-**DISCLAIMER II:** Some elements of the Compose file need refinement, I know. This has been a learning experience for myself, as well (plus things I still need to migrate from my private version of this repo over to the public; patience, people, please!).
+**DISCLAIMER II:** There are still updates I'd like to make to this repo and I will, in time. Who knows? I might scrap this whole thing and employ Terraform, instead...
 
 <br>
 
