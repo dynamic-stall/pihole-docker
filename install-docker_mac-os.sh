@@ -79,15 +79,9 @@ brew install docker && brew install docker-compose
 brew services enable docker && brew services start docker
 docker --version || sudo docker --version
 
-## cron job for periodically updating Homebrew packages:
-
-# Define the cron schedule (every Sunday at 3:45 am)
+# cron job for periodically updating Homebrew packages (every Sunday at 3:45 am):
 cron_schedule="45 3 * * 0"
-
-# Define the command to update and upgrade Homebrew packages with the -y option
 brew_update_command="brew update && brew upgrade -y"
-
-# Add the cron job
 (crontab -l ; echo "$cron_schedule $brew_update_command") | crontab -
 
 # Test run:
