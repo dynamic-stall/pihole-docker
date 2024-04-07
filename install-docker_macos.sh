@@ -1,10 +1,10 @@
 #!/bin/bash
 
 ######################################
-# Docker Install - Mac OS
+# Docker Install - macOS
 ######################################
 
-# IMPORTANT NOTE: I don't use Docker Desktop, but it is (apparently) the reccomended way to run and manage Docker services for Mac OS. Installing Docker Desktop  will install both Docker Engine and Docker Compose (both required).
+# IMPORTANT NOTE: I don't use Docker Desktop, but it is (apparently) the reccomended way to run and manage Docker services for macOS. Installing Docker Desktop  will install both Docker Engine and Docker Compose (both required).
 
 # Reference the below link to do so:
 
@@ -15,7 +15,7 @@
 
 ###### TL;DR ######
 
-# If needed, use this script to install Docker on your Mac OS. See the "Requirements" section for which versions of Mac OS should support this install.
+# If needed, use this script to install Docker on your macOS. See the "Requirements" section for which versions of macOS should support this install.
 
 # This will delete any previous installs you may or may not have on your system.
 
