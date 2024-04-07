@@ -22,7 +22,7 @@
 
 # Requirements
 
-* **Docker Compose or Docker Desktop** (Docker install scripts for [RHEL/CentOS Stream 8-9](./install-docker_rhel8-9.sh), [Pi OS](./install-docker_pi-os.sh), and [Mac OS](./install-docker_mac-os.sh) included in this repo)
+* **Docker Compose or Docker Desktop** (Docker install scripts for [RHEL/CentOS Stream 8-9](./install-docker_rhel8-9.sh), [Pi OS](./install-docker_pi-os.sh), and [macOS](./install-docker_macos.sh) included in this repo)
 
 * **Your pick of operating system, generally...** (_Windows_ installs will require WSL v1.2 or later) (_macOS_ version 10.13 -- High Sierra -- and newer is what ChatGPT and Google Gemini reccommend) (Most flavors of _Linux_ are supported, but Google is always your friend; I'm using CentOS Stream 9)
 
