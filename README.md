@@ -98,7 +98,7 @@ docker container ls
 If you see either container stuck in a ```Restarting``` state, something went wrong during the build ("This looks like a job for..." _you_). You can try re-composing (or restarting either stuck container) as a first troubleshooting step:
 
 ```bash
-docker compose up -d
+./reload-pihole.sh
 ```
 
 \<OR\>
