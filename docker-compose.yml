@@ -44,7 +44,7 @@ services:
 
     ## See the list of environment variables at https://github.com/pi-hole/docker-pi-hole/#environment-variables
     environment:
-      ## You can get a list of time zone at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+      ## You can get a list of time zones at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
       TZ: "America/New_York"
       
       ## In the './web-password' directory...
