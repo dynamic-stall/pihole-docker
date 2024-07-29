@@ -48,7 +48,7 @@ iii. (OPTIONAL) Check the _Set as Default DNS Location_ box and click _Add locat
 
 iv. (OPTIONAL) Click on your newly created location under the **Location name** menu. Under _Location details_, record the two **IPv4** addresses as well as the **DNS over HTTPS** URL. Save those three values for later. (Those IPv4 addresses are essentially your personal _1.1.1.1_ and _1.0.0.1_ with enhanced security options)
 
-![image](https://github.com/dynamic-stall/pi-hole-cloudflared-docker/assets/76631795/84d1828c-74f8-425d-85e1-a1ee95368e61)
+![cf-zerotrust gateway tutorial 1](https://github.com/user-attachments/assets/d543bdd3-a01e-4d81-844b-ab1543b02a5d)
 
 <br>
 
