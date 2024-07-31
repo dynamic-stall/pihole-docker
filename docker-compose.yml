@@ -85,7 +85,7 @@ networks:
     enable_ipv6: false
     ipam:
       config: 
-        - subnet: "172.31.10.0/24"
+        - subnet: "172.31.10.0/29"
         - gateway: "172.31.10.1"
 
   ## Reference the 'custom-network.sh' file, if you intend on going with a custom bridge or macvlan setup...
