@@ -104,7 +104,7 @@ If you see either container stuck in a ```Restarting``` state, something went wr
 \<OR\>
 
 ```bash
-docker restart <container_name>
+docker restart <container_hostname>
 ```
 
 <br>
