@@ -26,7 +26,7 @@
 
 * **Your pick of operating system, generally...** (_Windows_ installs will require WSL v1.2 or later) (_macOS_ version 10.13 -- High Sierra -- and newer is what ChatGPT and Google Gemini reccommend) (Most flavors of _Linux_ are supported, but Google is always your friend; I'm using CentOS Stream 9)
 
-* Preferably at least 4GB of RAM (2GB might work, but you likely won't be happy with it)
+* Preferably at least 4GB of RAM (2GB _might_ work, but you likely won't be happy with it)
 
 * (OPTIONAL) [Cloudflare Zero Trust](https://www.cloudflare.com/zero-trust/products/access/) account for enhanced DNS capabilities
 
