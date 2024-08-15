@@ -16,7 +16,7 @@
 
 <br>
 
-**DISCLAIMER II:** There are still updates I'd like to make to this repo and I will, in time. Who knows? I might scrap this whole thing and employ Terraform, instead...
+**DISCLAIMER II:** There are still updates I'd like to make to this repo and I will, in time...
 
 <br>
 
