@@ -25,7 +25,7 @@ services:
       ## Listen on all interfaces
       TUNNEL_DNS_ADDRESS: "0.0.0.0"
     networks:
-      pihole:
+      pihole_net:
         ## Cloudflared container IP
         ipv4_address: "172.31.10.3"
 
@@ -47,53 +47,44 @@ services:
       ## You can get a list of time zones at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
       TZ: "America/New_York"
       
-      ## In the './web-password' directory...
-      ## This directory is empty as I've added an interactive script to the 'build-pihole.sh' file that automates this step.
+      ## I've added an interactive script to the 'build-pihole.sh' file that automates this step.
       WEBPASSWORD_FILE: "/opt/pihole/web-password/password.txt"
       IPv6: false
       DHCP_ACTIVE: false
       WEBUIBOXEDLAYOUT: boxed
       QUERY_LOGGING: false
       WEBTHEME: "default-darker"
-
-      ## Cloudflared container IP
-      PIHOLE_DNS_: "172.31.10.3#5053"
-
-    ## Cloudflare DNS (enter 'IPv4' addresses you saved from STEP 6, if you took that step. otherwise, leave as is)
-    dns:
-      - 1.1.1.1
-      - 1.0.0.1
+      PIHOLE_DNS_: "172.31.10.3#5053"  ## Cloudflared container IP
+      #PIHOLE_DNS_: "1.1.1.1;1.0.0.1"  ## alternate, if not taking the extra Cloudflare steps
 
     ## Volumes to store your data between container upgrades
     volumes:
-      - "./etc-pihole:/etc/pihole"
-      - "./etc-dnsmasq.d:/etc/dnsmasq.d"
-      - "./web-password:/opt/pihole/web-password"
+      - "/opt/pihole:/etc/pihole"
+      - "/opt/pihole/dnsmasq.d:/etc/dnsmasq.d"
+      - "/opt/pihole/web-password:/etc/pihole/web-password"
 
     ## https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     #cap_add:
-      #- NET_ADMIN        ## This is required for version 4.1 onwards
+      #- NET_ADMIN   ## This is required for version 4.1 onwards
     restart: unless-stopped
     networks:
-      pihole:
+      pihole_net:
         ## Pi-hole container IP
         ipv4_address: "172.31.10.2"
 
 networks:
-  pihole:
+  pihole_net:
     driver: bridge
     enable_ipv6: false
     ipam:
       config: 
         - subnet: "172.31.10.0/29"
         - gateway: "172.31.10.1"
+    #external: true
+    #name: "law-net"
 
   ## Reference the 'custom-network.sh' file, if you intend on going with a custom bridge or macvlan setup...
-  ## Then, un-comment lines 98-99 and delete or comment out the "pihole" network declarations (lines 83-89)...
-  ## Then, you'll need to change lines 28 and 78 from "pihole" to the custom name (i.e., "law-net")...
+  ## Then, un-comment lines 83-84 and delete or comment out the "pihole_net" network declarations (lines 77-82)...
   ## Then, of course, you'll also need to update your IPs to match the subnet range you created.
   
-  ## OR, you can delete everything below line 89, as well, if this ain't your jam!
-  
-  #law-net:
-    #external: true
+  ## OR, you can delete everything below line 88, as well, if this ain't your jam!
