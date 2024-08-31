@@ -11,7 +11,7 @@
 
 ## You'll need to modify the docker-compose.yml file next:
 ## If going with MACVLAN, comment out or delete line 43, referencing the Web Admin UI port; you no longer need it.
-## Next (or "First," if sticking with bridge network), change line 80, referencing the Pi-hole container IP, to any available IP on your bridge/home network (within the set IP range, if going with MACVLAN).
+## Next (or "First," if sticking with bridge network), change lines 30 and 73, referencing the Cloudflared and Pi-hole container IPs, to any available IP addresses on your bridge/home network (within the set IP range, if going with MACVLAN).
 ## Lastly, follow the remaining instructions at the end of the docker-compose.yml file for any remaining configs not described here.
 
 # Variables:
