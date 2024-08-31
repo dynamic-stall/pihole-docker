@@ -121,10 +121,10 @@ Enter the Web Admin password you set earlier.
 
 <br>
 
-_If the password needs to be reset, run the following command, replacing ```<password>``` with... you intended password:_
+_If the password needs to be reset, run the following command, replacing ```<password>``` with you intended password:_
 
 ```bash
-docker exec <pihole_hostname> pihole -a -p <password>
+docker exec <pihole_container-name> pihole -a -p <password>
 ```
 
 * _(Leaving ```<password>``` blank will remove the password requirement altogether.)_
@@ -156,7 +156,7 @@ This last and most important step depends on your network setup and deployment s
 
 <br>
 
-* **Note**: I could have mentioned firewall configurations earlier than now... I've given you more than either of us needs, so I'm gonna leave this up to your _ingenuity_ (read: _ability to perform Google searches_).
+* **Note**: I could have mentioned firewall configurations earlier than now... I've given you more than either of us needs, so I'm gonna leave this up to your _ingenuity_ (read: _ability to perform Google searches_) (sorry; perks of AuDHD... when I'm tired, I'm tired...).
    * The basic command (for Linux users) is:
 
   ```bash
