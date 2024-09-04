@@ -87,4 +87,4 @@ networks:
   ## Then, un-comment lines 83-84 and delete or comment out the "pihole_net" network declarations (lines 77-82)...
   ## Then, of course, you'll also need to update your IPs to match the subnet range you created.
   
-  ## OR, you can delete everything below line 88, as well, if this ain't your jam!
+  ## OR, you can delete everything below line 82, as well, if this ain't your jam!
