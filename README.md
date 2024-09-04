@@ -16,7 +16,7 @@
 
 <br>
 
-**DISCLAIMER II:** There are still updates I'd like to make to this repo and I will, in time...
+**DISCLAIMER II:** There are still updates I'd like to make to this repo (i.e., Docker Compose ```.env``` file, etc.) and I will, in time...
 
 <br>
 
