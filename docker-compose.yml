@@ -16,7 +16,7 @@ services:
     restart: unless-stopped
     command: proxy-dns
 
-    ## See the list of environment variables at https://github.com/cloudflare/cloudflared/blob/master/cmd/cloudflared/proxydns/cmd.go
+    ## See the list of environment variables at https://github.com/pi-hole/docker-pi-hole
     environment:
       ## Enter the 'DNS over HTTPS' URL you saved from STEP 6, if you took that step. Otherwise, leave as is
       TUNNEL_DNS_UPSTREAM: "https://1.1.1.1/dns-query,https://1.0.0.1/dns-query"
