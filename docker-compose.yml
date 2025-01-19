@@ -55,7 +55,7 @@ services:
       WEBTHEME: "default-darker"
       DNS1: "172.31.10.3#5053"  ## Cloudflared container IP
       #DNS2: "1.1.1.1"  ## secondary DNS... failover here would, however, mean lack of DoH... the choice is yours
-
+      TEMPERATUREUNIT: 'f'
     ## Volumes to store your data between container upgrades
     volumes:
       - "/opt/pihole:/etc/pihole"
