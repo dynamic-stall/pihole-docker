@@ -16,7 +16,6 @@ services:
     restart: unless-stopped
     command: proxy-dns
 
-    ## See the list of environment variables at https://github.com/pi-hole/docker-pi-hole
     environment:
       ## Enter the 'DNS over HTTPS' URL you saved from STEP 6, if you took that step. Otherwise, leave as is
       TUNNEL_DNS_UPSTREAM: "https://1.1.1.1/dns-query,https://1.0.0.1/dns-query"
@@ -54,8 +53,8 @@ services:
       WEBUIBOXEDLAYOUT: boxed
       QUERY_LOGGING: false
       WEBTHEME: "default-darker"
-      PIHOLE_DNS_: "172.31.10.3#5053"  ## Cloudflared container IP
-      #PIHOLE_DNS_: "1.1.1.1;1.0.0.1"  ## alternate, if not taking the extra Cloudflare steps
+      DNS1: "172.31.10.3#5053"  ## Cloudflared container IP
+      DNS2: "1.1.1.1"  ## secondary DNS, if problems arise with the Cloudflared tunnel; you can modify these from the admin console, as well
 
     ## Volumes to store your data between container upgrades
     volumes:
