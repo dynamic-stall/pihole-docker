@@ -54,7 +54,7 @@ services:
       QUERY_LOGGING: false
       WEBTHEME: "default-darker"
       DNS1: "172.31.10.3#5053"  ## Cloudflared container IP
-      DNS2: "1.1.1.1"  ## secondary DNS, if problems arise with the Cloudflared tunnel; you can modify these from the admin console, as well
+      #DNS2: "1.1.1.1"  ## secondary DNS... failover here would, however, mean lack of DoH... the choice is yours
 
     ## Volumes to store your data between container upgrades
     volumes:
