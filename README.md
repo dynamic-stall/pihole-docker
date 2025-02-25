@@ -1,4 +1,4 @@
-# Pi-hole Ad Blocker with Cloudflare Proxy DNS, Docker Compose
+# Pi-hole Ad Blocker with Cloudflare Proxy DNS
 
 ###### \* _credit goes to **apavamontri** for original code (see: https://github.com/apavamontri/pi-hole-cloudflared-docker)_ *
 
