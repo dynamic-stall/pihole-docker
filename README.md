@@ -1,4 +1,4 @@
-# Pi-hole Ad Blocker + Cloudflare Tunnel Client via Docker Compose
+# Pi-hole Ad Blocker with Cloudflare Proxy DNS, Docker Compose
 
 ###### \* _credit goes to **apavamontri** for original code (see: https://github.com/apavamontri/pi-hole-cloudflared-docker)_ *
 
