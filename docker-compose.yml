@@ -36,7 +36,6 @@ services:
     environment:
       TZ: ${PIHOLE_TZ}
       ## I've added an interactive script to the 'build-pihole.sh' file that automates this step
-      WEBPASSWORD_FILE: ${PIHOLE_PASS}
       IPv6: false
       DHCP_ACTIVE: false
       WEBUIBOXEDLAYOUT: boxed
