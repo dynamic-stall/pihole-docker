@@ -115,13 +115,13 @@ Enter the Web Admin password you set earlier.
 
 <br>
 
-_If the password needs to be reset, run the following command, replacing ```<password>``` with you intended password:_
+_If the password needs to be reset, run the following command:_
 
 ```bash
-docker exec <pihole-container-name> pihole -a -p <password>
+docker exec <pihole-container-name> pihole setpassword
 ```
 
-* _(Leaving ```<password>``` blank will remove the password requirement altogether.)_
+* _(Entering a blank password will remove the password requirement altogether.)_
 
 <br>
 
