@@ -65,7 +65,7 @@ networks:
     #name: "law-net"
 
   ## Reference the 'custom-network.sh' file, if you intend on going with a custom bridge or macvlan setup...
-  ## Then, un-comment lines 68-69 and delete or comment out the "pihole_net" network declarations (lines 62-67)...
+  ## Then, un-comment lines 64-65 and delete or comment out the "pihole_net" network declarations (lines 58-63)...
   ## Then, of course, you'll also need to update your IPs to match the subnet range you created.
   
-  ## OR, you can delete everything below line 67, if this ain't your jam!
+  ## OR, you can delete everything below line 63, if this ain't your jam!
