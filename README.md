@@ -1,7 +1,5 @@
 # Pi-hole Ad Blocker with Cloudflare Proxy DNS
 
-###### \* _credit goes to **apavamontri** for original code (see: https://github.com/apavamontri/pi-hole-cloudflared-docker)_ *
-
 <br>
 
 **BLUF**: This project will allow you to use [Docker Compose](https://docs.docker.com/compose/) to run [Pi-hole](https://pi-hole.net/) and [Cloudflare Tunnel Client](https://github.com/cloudflare/cloudflared) in tandem to achieve [DNS-Over-HTTPS](https://docs.pi-hole.net/guides/dns/cloudflared/). Not to mention network-level ad blocking!
@@ -16,11 +14,7 @@
 
 <br>
 
-**DISCLAIMER II:** There are still updates I'd like to make to this repo (i.e., Docker Compose ```.env``` file, etc.) and I will, in time...
-
-<br>
-
-# Requirements
+## Requirements
 
 * **Docker Compose or Docker Desktop** (Docker install scripts for [RHEL/CentOS Stream 8-9](./install-docker_rhel8-9.sh), [Pi OS](./install-docker_pi-os.sh), and [macOS](./install-docker_macos.sh) included in this repo)
 
@@ -32,7 +26,7 @@
 
 <br>
 
-# Build Instructions
+## Build Instructions
 
 i. (OPTIONAL) Create/[log into](https://dash.cloudflare.com/login) your Cloudflare account and Navigate to **Zero Trust** from the lefthand menu. Expand _Gateway_ and select _DNS Locations_.
 
@@ -52,28 +46,26 @@ iv. (OPTIONAL) Click on your newly created location under the **Location name** 
 
 <br>
 
-1. Make sure Docker is running by entering the following command in the terminal:
-
+1. Clone this repository:
 ```bash
-docker --version
+git clone https://github.com/dynamic-stall/vaultwarden-docker
+cd vaultwarden-docker
 ```
 
-It should return something like this:
-
-```text
-Docker version 20.10.21, build baeda1f
+2. Create `.env` from `example` file (_be sure to add your personalized variables_):
+```bash
+cp .env.example .env
 ```
-
 <br>
 
-2. You can change the configuration values of Pi-hole and Cloudflare Tunnel Client in the [docker-compose.yml](./docker-compose.yml) file. Port configs should generally be left as is, unless you have specific requirements based on your environment. IP address ranges can be left as is, as Docker will create the bridge network for you (check notes at the end of that file as well as the troubleshooting steps in one of the ```install-docker_*``` scripts for details on how to specify _existing_ external networks). I advise you leave the CONTAINER names as is; another script relies on them being named, "pihole" and "cloudflared." HOSTNAME changes will affect nothing but the joy in your heart.
+3. You can change the configuration values of Pi-hole and Cloudflare Tunnel Client in the [docker-compose.yml](./docker-compose.yml) file. Port configs should generally be left as is, unless you have specific requirements based on your environment. IP address ranges can be left as is, as Docker will create the bridge network for you (check notes at the end of that file as well as the troubleshooting steps in one of the ```install-docker_*``` scripts for details on how to specify _existing_ external networks). I advise you leave the CONTAINER names as is; another script relies on them being named, "pihole" and "cloudflared." HOSTNAME changes will affect nothing but the joy in your heart.
 
    * Docker Pi-hole's [Environment Variables](https://github.com/pi-hole/docker-pi-hole/#environment-variables)
    * Cloudflare Tunnel Client's [Environment Variables](https://github.com/cloudflare/cloudflared/blob/master/cmd/cloudflared/proxydns/cmd.go)
 
 <br>
 
-3. To build the Docker containers, run [build-pihole.sh](./build-pihole.sh):
+4. To create the directories for the Docker volumes, set your Pi-hole password, and build the Docker containers, run [build-pihole.sh](./build-pihole.sh):
 
 ```bash
 sudo ./build-pihole.sh
@@ -89,27 +81,27 @@ This bash script will:
 
 <br>
 
-4. Run the following command to check basic stats for your newly erected containers:
+5. Run the following command to check basic stats for your newly erected containers:
 
 ```bash
-docker container ls
+docker ps
 ```
 
-If you see either container stuck in a ```Restarting``` state, something went wrong during the build ("This looks like a job for..." _you_). You can try re-composing (or restarting either stuck container) as a first troubleshooting step:
+If you see either container stuck in a ```Restarting``` state, something went wrong during the build. You can try re-composing (or restarting either stuck container) as a first troubleshooting step:
 
 ```bash
-./reload-pihole.sh
+docker restart <container-name>
 ```
 
 \<OR\>
 
 ```bash
-docker restart <container_hostname>
+docker compose up -d
 ```
 
 <br>
 
-# Pi-hole Web Admin UI
+## Pi-hole Web Admin UI
 
 Once the Pi-hole Docker container has started, you can access Pi-hole's Web Admin UI at [http://localhost:8061/admin](http://localhost:8061/admin).
 
@@ -124,7 +116,7 @@ Enter the Web Admin password you set earlier.
 _If the password needs to be reset, run the following command, replacing ```<password>``` with you intended password:_
 
 ```bash
-docker exec <pihole_container-name> pihole -a -p <password>
+docker exec <pihole-container-name> pihole -a -p <password>
 ```
 
 * _(Leaving ```<password>``` blank will remove the password requirement altogether.)_
@@ -137,7 +129,7 @@ You can check the **Upstream DNS Servers** by navigating to _Settings_ from the 
 
 <br>
 
-# Network Configuration
+## Network Configuration
 
 This last and most important step depends on your network setup and deployment strategy.
 
