@@ -52,6 +52,8 @@ git clone https://github.com/dynamic-stall/pihole-docker
 cd pihole-docker
 ```
 
+<br>
+
 2. Create `.env` from `example` file (_be sure to add your personalized variables_):
 ```bash
 cp .env.example .env
