@@ -94,9 +94,9 @@ set_volume_directory() {
     for volume in "$PIHOLE_VOLUME_DIR" "$PIHOLE_VOLUME_DIR/dnsmasq.d"; do
         if [ ! -d "$volume" ]; then
             sudo mkdir -p "$volume"
-            log Volume directory created: "${GREEN}$volume${NC}"
+            log "Volume directory created: '${GREEN}$volume${NC}'"
         else
-            log Volume directory already exists: "${GREY}$volume${NC}"
+            log "Volume directory already exists: '${GREY}$volume${NC}'"
         fi
 
         sudo chown -R root:docker "$volume"
@@ -120,6 +120,7 @@ main() {
     set_volume_directory
     configure_pihole
     success "Pi-hole DNS over HTTPS setup completed successfully!"
+    docker ps
     prompt "Please check the README for post-installation steps and networking considerations."
 }
 
