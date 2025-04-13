@@ -28,8 +28,8 @@ services:
     image: pihole/pihole:latest
     ## For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
     ports:
-      - "53:53/tcp"
-      - "53:53/udp"
+      - "5353:53/tcp"
+      - "5353:53/udp"
       #- "67:67/udp"    ## Only required if you are using Pi-hole as your DHCP server
       ## Web Admin Port
       - "${PIHOLE_PORT}:80/tcp"
@@ -64,7 +64,7 @@ networks:
     ipam:
       config:
         - subnet: "172.31.10.0/29"
-        - gateway: "172.31.10.1"
+          gateway: "172.31.10.1"
     #external: true
     #name: "law-net"
 
