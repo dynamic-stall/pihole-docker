@@ -1,10 +1,10 @@
 Recommended Blocklists to Add to Your Pi-hole Setup (optional):
 
 ## Hagezi's light list - a good balance of blocking vs performance ##
-"https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/light.txt"
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/light.txt
 
 ## Comprehensive ad and tracker blocking ##
-"https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/ads-and-tracking-extended.txt"
+https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/ads-and-tracking-extended.txt
     
 ## AdGuard DNS filter - excellent for ads and tracking ##
-"https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
+https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
