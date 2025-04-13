@@ -41,8 +41,7 @@ services:
       WEBUIBOXEDLAYOUT: boxed
       QUERY_LOGGING: false
       WEBTHEME: "default-darker"
-      DNS1: ${PIHOLE_DNS}
-      #DNS2: "1.1.1.1"    ## secondary DNS... failover here would, however, mean lack of DoH... the choice is yours
+      FTLCONF_dns_upstreams: ${PIHOLE_DNS}    ## add up to 2 additional DNS servers by separating with a semi-colon (;)... failover would, however, mean lack of DoH... the choice is yours
       TEMPERATUREUNIT: 'f'
     volumes:
       - "${PIHOLE_VOLUME_DIR}:/etc/pihole"
