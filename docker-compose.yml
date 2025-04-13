@@ -47,7 +47,6 @@ services:
     volumes:
       - "${PIHOLE_VOLUME_DIR}:/etc/pihole"
       - "${PIHOLE_VOLUME_DIR}/dnsmasq.d:/etc/dnsmasq.d"
-      - "${PIHOLE_VOLUME_DIR}/.web-password:/etc/pihole/web-password"
     ## https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     #cap_add:
       #- NET_ADMIN    ## only required for DHCP
