@@ -48,8 +48,8 @@ iv. (OPTIONAL) Click on your newly created location under the **Location name** 
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/dynamic-stall/vaultwarden-docker
-cd vaultwarden-docker
+git clone https://github.com/dynamic-stall/pihole-docker
+cd pihole-docker
 ```
 
 2. Create `.env` from `example` file (_be sure to add your personalized variables_):
