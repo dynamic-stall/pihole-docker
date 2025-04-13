@@ -68,9 +68,6 @@ check_prerequisites() {
 	newgrp docker
     fi
 
-    # Set ID_GRP variable for docker-compose .env file
-    export ID_GRP=$(getent group docker | cut -d: -f3)
-
     # Check if /usr/bin/docker has correct group ownership
     current_group=$(stat -c '%G' /usr/bin/docker)
     if [ "$current_group" != "docker" ]; then
