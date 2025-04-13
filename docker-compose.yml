@@ -42,7 +42,6 @@ services:
       QUERY_LOGGING: false
       WEBTHEME: "default-darker"
       FTLCONF_dns_upstreams: ${PIHOLE_DNS}    ## add up to 2 additional DNS servers by separating with a semi-colon (;)... failover would, however, mean lack of DoH... the choice is yours
-      TEMPERATUREUNIT: 'f'
     volumes:
       - "${PIHOLE_VOLUME_DIR}:/etc/pihole"
       - "${PIHOLE_VOLUME_DIR}/dnsmasq.d:/etc/dnsmasq.d"
