@@ -91,7 +91,7 @@ set_volume_directory() {
     source "$ENV"
 
     # Set permissions for volume directories
-    for volume in "$PIHOLE_VOLUME_DIR" "$PIHOLE_VOLUME_DIR/dnsmasq.d" "$PIHOLE_VOLUME_DIR/.web-password"; do
+    for volume in "$PIHOLE_VOLUME_DIR" "$PIHOLE_VOLUME_DIR/dnsmasq.d"; do
         if [ ! -d "$volume" ]; then
             sudo mkdir -p "$volume"
             log Volume directory created: "${GREEN}$volume${NC}"
@@ -105,31 +105,20 @@ set_volume_directory() {
     done
 }
 
-set_password() {
+configure_pihole() {
     source "$ENV"
 
-    # Check if password file exists
-    if [ ! -f "$PIHOLE_VOLUME_DIR/.web-password/password.txt" ]; then
-        log "Password file not found. Creating..."
-        touch "$PIHOLE_VOLUME_DIR/.web-password/password.txt"
-    fi
-
-    # Check if password is set
-    if [ -s "$PIHOLE_VOLUME_DIR/.web-password/password.txt" ]; then
-        log "Password already set. Skipping..."
-    else
-        read -p "Set your Web Admin console password now: " -s PSWD
-        echo $PSWD > "$PIHOLE_VOLUME_DIR/.web-password/password.txt"
-        log "Password set successfully."
-    fi
+    log "Composing Docker containers..."
+    docker compose up -d || error "Failed to start containers"
+    prompt "Almost done! Please set your password for the Pi-hole web interface."
+    docker exec -it $PIHOLE_NAME pihole setpassword || warning "Failed to set password. Please run the command manually."
 }
 
 main() {
     log "Starting Pi-hole DNS over HTTPS setup..."
     check_prerequisites
     set_volume_directory
-    set_password
-    docker compose up -d || error "Failed to start containers"
+    configure_pihole
     success "Pi-hole DNS over HTTPS setup completed successfully!"
     prompt "Please check the README for post-installation steps and networking considerations."
 }
