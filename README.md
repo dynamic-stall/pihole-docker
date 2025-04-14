@@ -40,9 +40,9 @@ iii. (OPTIONAL) Check the _Set as Default DNS Location_ box and click _Add locat
 
 <br>
 
-iv. (OPTIONAL) Click on your newly created location under the **Location name** menu. Under _Location details_, record the two **IPv4** addresses as well as the **DNS over HTTPS** URL. Save those three values for later. (Those IPv4 addresses are essentially your personal _1.1.1.1_ and _1.0.0.1_ with enhanced security options)
+iv. (OPTIONAL) Click on your newly created location under the **Location name** menu. Under _Location details_, record the **DNS over HTTPS** URL. Save that values for later.
 
-![cf-zerotrust gateway tutorial 1](https://github.com/user-attachments/assets/d543bdd3-a01e-4d81-844b-ab1543b02a5d)
+![cloudflare-gateway-dns-locations](https://github.com/user-attachments/assets/ca6b0456-7fcf-47f3-807e-0fc528c8f81f)
 
 <br>
 
