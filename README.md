@@ -40,9 +40,9 @@ iii. (OPTIONAL) Check the _Set as Default DNS Location_ box and click _Add locat
 
 <br>
 
-iv. (OPTIONAL) Click on your newly created location under the **Location name** menu. Under _Location details_, record the **DNS over HTTPS** URL. Save that values for later.
+iv. (OPTIONAL) Click on your newly created location under the **Location name** menu. Under _Location details_, record the **DoH endpoint** URL. Save that value for later.
 
-![cloudflare-gateway-dns-locations](https://github.com/user-attachments/assets/ca6b0456-7fcf-47f3-807e-0fc528c8f81f)
+![cloudflare-gateway-dns-locations](https://github.com/user-attachments/assets/bfdd08c2-8cb0-4481-9465-6642d6c8d3b5)
 
 <br>
 
