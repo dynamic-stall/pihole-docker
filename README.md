@@ -70,7 +70,7 @@ cp .env.example .env
 4. To create the directories for the Docker volumes, set your Pi-hole password, and build the Docker containers, run [build-pihole.sh](./build-pihole.sh):
 
 ```bash
-sudo ./build-pihole.sh
+./build-pihole.sh
 ```
 
 This bash script will:
