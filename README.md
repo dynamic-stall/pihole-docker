@@ -133,6 +133,44 @@ You can check the **Upstream DNS Servers** by navigating to _Settings_ from the 
 
 <br>
 
+## Updating Blocklists and Allowlists
+
+Completely optional, but you can further bolster the blocklists and/or allowlists your Pi-hole instance uses (the default [Steven Black list](https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts) is great on its own, but you may have a more stringent use case). If you'd like, you may make use of the additional [blocklist](./blocklist.txt) and [allowlist](./allowlist.txt) text files I've included in this repo. The easiest way to accomplish this is to navigate to the _Subscribed lists group management_ page in your Pi-hole dashboard, which you can find by clicking **Lists** from the left-hand menu. Then, open up the text files and copy/paste each into URL field under _Add a new subscribed list_. Enter an optional comment to better organize each list item, then click either the red **Add blocklist** or the green **Add allowlist** button on the right depending on which URL type you're pasting.
+
+![pihole-lists-add](https://github.com/user-attachments/assets/c3577aeb-a442-4117-a290-18ce4aab7fe8)
+
+<br>
+
+Next, navigate to **Tools --> Update Gravity** from the left-hand menu. Click the blue _Update_ button and wait for the update to complete before navigating to any different pages (there should be a "_[✓] Done._" at the very end of the output that displays).
+
+![pihole-update-gravity](https://github.com/user-attachments/assets/b4181ca9-523b-44e2-9106-019aad0928ce)
+
+<br>
+
+**NOTE:** Pi-hole auto-updates Gravity each _Sunday_ as long as your container is up, running, and connected to the Internet (I don't know at what time, but I'm sure Google knows... LOL).
+
+**Note II:** You can also update your lists at the CLI via `pihole deny` or `pihole allow` commands; then run `pihole -g` to update the database. Sample commands below:
+
+Update blocklist via CLI:
+```bash
+# Add one (or more) URL(s) to your blocklist:
+docker exec -it <pihole-container-name> pihole deny site.com [site2.com site3.com ...]
+
+# Update database:
+docker exec -it <pihole-container-name> gravity -g
+```
+
+Update allowlist via CLI:
+```bash
+# Add one (or more) URL(s) to your allowlist:
+docker exec -it <pihole-container-name> pihole allow site.com [site2.com site3.com ...]
+
+# Update database:
+docker exec -it <pihole-container-name> gravity -g
+```
+
+<br>
+
 ## Network Configuration
 
 This last and most important step depends on your network setup and deployment strategy.
