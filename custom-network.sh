@@ -7,11 +7,11 @@
 ## To do so, change the DRIVER variable below (line 21) from "bridge" to "macvlan".
 ## Next, ensure the SUBNET and GATEWAY variables match those of your home network settings (check the LAN settings of your router, if you aren't sure).
 ## Finally, un-comment the IP_RANGE lines below (22 and 29) and enter in an IP range on line 20 (this step requires a bit of CIDR knowledge).
-## (choose an IP range that isn't too restrictive and won't cause IP conflicts with other network devices. I recommend using a chunk from the latter half of your IP pool; i.e., x.x.x.128/26)
+## (choose an IP range that isn't too restrictive and won't cause IP conflicts with other network devices. I recommend using a chunk from the latter half of your IP pool; i.e., x.x.x.128/25)
 
 ## You'll need to modify the docker-compose.yml file next:
-## If going with MACVLAN, comment out or delete line 43, referencing the Web Admin UI port; you no longer need it.
-## Next (or "First," if sticking with bridge network), change lines 30 and 73, referencing the Cloudflared and Pi-hole container IPs, to any available IP addresses on your bridge/home network (within the set IP range, if going with MACVLAN).
+## If going with MACVLAN, comment out or delete line 35, referencing the Web Admin UI port; you no longer need it.
+## Next (or "First," if sticking with bridge network), change lines 22 and 54, referencing the Cloudflared and Pi-hole container IPs, to any available IP addresses on your bridge/home network (within the set IP range, if going with MACVLAN).
 ## Lastly, follow the remaining instructions at the end of the docker-compose.yml file for any remaining configs not described here.
 
 # Variables:
@@ -38,5 +38,5 @@ $NETWORK_NAME
 #--attachable \
 #--subnet=192.168.0.0/24 \
 #--gateway=192.168.0.1 \
-#--ip-range=192.168.0.128/26 \
+#--ip-range=192.168.0.192/26 \
 #trafalgar-net
