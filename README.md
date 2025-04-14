@@ -54,7 +54,7 @@ cd pihole-docker
 
 <br>
 
-2. Create `.env` from `example` file (_be sure to add your personalized variables_):
+2. Create a `.env` from the `example` file (_be sure to add your personalized variables_):
 ```bash
 cp .env.example .env
 ```
@@ -75,21 +75,21 @@ sudo ./build-pihole.sh
 
 This bash script will:
 
-   * Ask for your intended Web Admin password (in 'silent mode' for added security; i.e., you won't see characters as you type).
+   * Create your local directories -- and set permissions -- for the Pi-hole container (if not already set up)
 
-   * Start Docker Compose (in daemon mode).
+   * Establish a Docker group for the current user (if one hasn't been created already)
 
-   * Build your containers to spec (successfully, one would hope).
+   * Start Docker Compose (in daemon mode)
+
+   * Build your containers to spec (successfully, one would hope)
+
+   * Set your Pi-hole password (no password file needed... who wants a plaintext file with sensitive info lying around?)
+
+   * Display the containers created and their current status via `docker ps` command
 
 <br>
 
-5. Run the following command to check basic stats for your newly erected containers:
-
-```bash
-docker ps
-```
-
-If you see either container stuck in a ```Restarting``` state, something went wrong during the build. You can try re-composing (or restarting either stuck container) as a first troubleshooting step:
+If you see either container stuck in a ```Restarting``` state, something went wrong during the build; chances are, it's related to your volume directories (permissions or their very existence). You can also try restarting either stuck container (or re-composing) as a troubleshooting step:
 
 ```bash
 docker restart <container-name>
@@ -100,6 +100,8 @@ docker restart <container-name>
 ```bash
 docker compose up -d
 ```
+
+If the `restarting` status persists, take a look at your volume directories (default: `/srv/docker/pihole/`). Ensure that ownership is set to `root:docker` and that you have at least `read` and `execute` permissions. The script sets them to `770` (a.k.a. `rwxrwx---`) by default. Also ensure that your current user has access to the `docker` group (which the [build-pihole.sh](./build-pihole.sh) script takes care of). 
 
 <br>
 
@@ -150,7 +152,7 @@ This last and most important step depends on your network setup and deployment s
 
 <br>
 
-* **Note**: I could have mentioned firewall configurations earlier than now... I've given you more than either of us needs, so I'm gonna leave this up to your _ingenuity_ (read: _ability to perform Google searches_) (sorry; perks of AuDHD... when I'm tired, I'm tired...).
+* **Note**: I could have mentioned firewall configurations earlier than now... Depending on your server/PC setup, you may not need to worry about this; chances are if you think you might, you probably don't. Run `netstat -tuln | grep <port-numbers>` to verify. If nothing is returned at your terminal, go ahead and run the commands below to update your firewall.
    * The basic command (for Linux users) is:
 
   ```bash
