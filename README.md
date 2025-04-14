@@ -127,9 +127,9 @@ docker exec <pihole-container-name> pihole setpassword
 
 <br>
 
-You can check the **Upstream DNS Servers** by navigating to _Settings_ from the lefthand menu and selecting the DNS tab. You should see the IP address set for your Cloudflare Tunnel Client under **Custom 1 (IPv4)**.
+You can check the **Upstream DNS Servers** by navigating to _Settings_ from the lefthand menu and selecting the DNS tab. You should see the IP address set for your Cloudflare Tunnel Client under **Custom DNS Servers**.
 
-![d-room dns scrnshot-markup](https://github.com/dynamic-stall/pihole-cloudflared-docker/assets/76631795/e45c3a88-f66d-4a02-8e60-e1743f7ac9d7)
+![pihole-dash-dns-settings](https://github.com/user-attachments/assets/3081a642-5fce-44bf-adc6-c3c005dfa603)
 
 <br>
 
