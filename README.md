@@ -101,7 +101,9 @@ docker restart <container-name>
 docker compose up -d
 ```
 
-If the `restarting` status persists, take a look at your volume directories (default: `/srv/docker/pihole/`). Ensure that ownership is set to `root:docker` and that you have at least `read` and `execute` permissions. The script sets them to `770` (a.k.a. `rwxrwx---`) by default. Also ensure that your current user has access to the `docker` group (which the [build-pihole.sh](./build-pihole.sh) script takes care of). 
+If the `restarting` status persists, check your volume directories (default: `/srv/docker/pihole/`). Ensure that the directories are owned by `root:docker` with proper permissions. The script sets permissions to `770` (rwxrwx---) by default, which allows the container to function but is more permissive than necessary. For improved security, you could reduce permissions to `750` (rwxr-x---) for directories and `640` (rw-r-----) for files while still maintaining functionality. Additionally, confirm that your user account is a member of the `docker` group (which the [build-pihole.sh](./build-pihole.sh) script handles automatically).
+
+**Note:** Newly created files in these directories will inherit permissions based on the container's `umask`, not manually set permissions.
 
 <br>
 
