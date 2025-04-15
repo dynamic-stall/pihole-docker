@@ -159,7 +159,7 @@ Update blocklist via CLI:
 docker exec -it <pihole-container-name> pihole deny site.com [site2.com site3.com ...]
 
 # Update database:
-docker exec -it <pihole-container-name> gravity -g
+docker exec -it <pihole-container-name> pihole gravity -g
 ```
 
 Update allowlist via CLI:
@@ -168,7 +168,7 @@ Update allowlist via CLI:
 docker exec -it <pihole-container-name> pihole allow site.com [site2.com site3.com ...]
 
 # Update database:
-docker exec -it <pihole-container-name> gravity -g
+docker exec -it <pihole-container-name> pihole gravity -g
 ```
 
 <br>
