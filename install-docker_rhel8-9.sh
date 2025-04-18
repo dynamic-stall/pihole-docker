@@ -55,4 +55,3 @@ sudo usermod -aG docker $USER
 
 # Test run:
 docker run --rm hello-world
-
