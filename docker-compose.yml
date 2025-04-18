@@ -28,8 +28,8 @@ services:
     image: pihole/pihole:latest
     ## For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
     ports:
-      - "5353:53/tcp"
-      - "5353:53/udp"
+      - "53:53/tcp"    ## if you have, i.e., 'systemd-resolved' working in the background, it's best to disable it for Pi-hole to work most effectively...
+      - "53:53/udp"    ## ... alternatively, you could use a non-standard port here (5353, etc.), but that is less ideal, as most devices will only check port 53 for DNS.
       #- "67:67/udp"    ## Only required if you are using Pi-hole as your DHCP server
       ## Web Admin Port
       - "${PIHOLE_PORT}:80/tcp"
