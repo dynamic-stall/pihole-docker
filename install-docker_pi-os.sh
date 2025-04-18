@@ -47,15 +47,15 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Start/enable Docker service:
-sudo service enable docker
+sudo systemctl enable docker
 
 # Verify Docker status and version
-if [[ $(service status docker | grep "active (running)") == "" ]]
+if [[ $(systemctl status docker | grep "active (running)") == "" ]]
 then
-        sudo service start docker > /dev/null 2>&1
-        service status docker
+        sudo systemctl start docker > /dev/null 2>&1
+        systemctl status docker
 else
-        service status docker
+        systemctl status docker
 fi
 
 sudo docker --version
@@ -65,4 +65,3 @@ sudo usermod -aG docker $USER
 
 # Test run:
 docker run --rm hello-world
-
