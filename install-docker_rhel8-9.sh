@@ -48,10 +48,21 @@ else
 	systemctl status docker
 fi
 
-sudo docker --version
-
 # Configure Docker to run without sudo:
 sudo usermod -aG docker $USER
+sudo chown root:docker /usr/bin/docker
+sudo chmod 750 /usr/bin/docker
+newgrp docker
 
-# Test run:
-docker run --rm hello-world
+echo "Docker installed successfully!"
+docker --version
+
+sleep 1s
+
+echo "Testing installation..."
+
+if [[ $(docker run --rm hello-world | grep "Hello from Docker!") == "" ]]
+then
+	echo "Docker test run failed. Check your log files for more information."
+	exit 1
+fi
