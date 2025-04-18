@@ -37,7 +37,7 @@ sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/dock
 sudo dnf install -y docker-ce --nobest
 
 # Start/enable Docker service:
-sudo systemctl enable --now docker
+sudo systemctl enable docker
 
 # Verify Docker status and version
 if [[ $(systemctl status docker | grep "active (running)") == "" ]]
